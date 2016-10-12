@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ငါ၏အကြောက်မက်ဘွယ် app ကို</string>
+    <string name="butnext">နောက်တစ်ခု</string>
+    <string name="name_hint">နာမတျောကို</string>
+    <string name="calc_but">ရေတွက်ရန်ကိရိယာ</string>
+</resources>

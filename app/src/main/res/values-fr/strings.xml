@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mon super app</string>
+    <string name="butnext">prochain</string>
+    <string name="name_hint">Nom</string>
+</resources>
