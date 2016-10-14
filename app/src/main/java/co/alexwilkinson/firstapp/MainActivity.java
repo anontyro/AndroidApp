@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -54,4 +56,30 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
+    public void buShow(View view) {
+        //allow access to another view using the inflator
+        LayoutInflater myInflator = getLayoutInflater();
+        View view1 = myInflator.inflate(R.layout.showlayout,null);
+
+        //call the EditText field from the other view and change it
+        EditText et = (EditText) view1.findViewById(R.id.etTitle);
+        et.setText("Welcome");
+
+        //displays the showlayout page using the Toast command
+        Toast toast = new Toast(getApplicationContext());
+        toast.setView(view1);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_VERTICAL,0,0);
+        toast.show();
+    }
+
+    public void buCalc(View view) {
+        Intent intent = new Intent(this, CalcActivity.class);
+        startActivity(intent);
+    }
+
+    public void buList(View view) {
+        Intent intent = new Intent(this, ListActivity.class );
+        startActivity(intent);
+    }
 }
