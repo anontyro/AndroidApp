@@ -2,6 +2,7 @@ package co.alexwilkinson.firstapp;
 
 /**
  * Created by Alex on 14/10/2016.
+ * Used for the ListActivity
  */
 
 public class AdapterItems {

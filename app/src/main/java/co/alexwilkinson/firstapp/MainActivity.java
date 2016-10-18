@@ -1,8 +1,10 @@
 package co.alexwilkinson.firstapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -29,6 +31,23 @@ public class MainActivity extends AppCompatActivity {
         txtDisplay.setText("");
 
         userName = (EditText) findViewById(R.id.name);
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Welcome, do you want to contiune?")
+                .setTitle("Welcome")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
 
     }
 
@@ -80,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void buList(View view) {
         Intent intent = new Intent(this, ListActivity.class );
+        startActivity(intent);
+    }
+
+    public void buLoginNow(View view) {
+        Intent intent = new Intent(this,LoginActivity.class);
         startActivity(intent);
     }
 }
